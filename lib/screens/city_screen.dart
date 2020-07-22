@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
 
-class Error extends StatefulWidget {
+class CityScreen extends StatefulWidget {
   @override
-  _ErrorState createState() => _ErrorState();
+  _CityScreenState createState() => _CityScreenState();
 }
 
-class _ErrorState extends State<Error> {
+class _CityScreenState extends State<CityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,13 +21,24 @@ class _ErrorState extends State<Error> {
         child: SafeArea(
           child: Column(
             children: <Widget>[
+              Align(
+                alignment: Alignment.topLeft,
+                child: FlatButton(
+                  onPressed: () {},
+                  child: Icon(
+                    Icons.arrow_back_ios,
+                    size: 50.0,
+                  ),
+                ),
+              ),
               Container(
                 padding: EdgeInsets.all(20.0),
                 child: null,
               ),
-              Center(
+              FlatButton(
+                onPressed: () {},
                 child: Text(
-                  'Something went wrong',
+                  'Get Weather',
                   style: kButtonTextStyle,
                 ),
               ),
